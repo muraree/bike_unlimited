@@ -12,5 +12,7 @@ class GenerateUserPdf
     File.open(save_path, 'wb') do |file|
       file << pdf
     end
+    RiderMailer.send_mail(data, pdf).deliver_now
   end
 end
+
