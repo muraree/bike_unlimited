@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LICENCE_INFO</title>
+<style>
+  body {
+    background: #eee
+  }
+
+  .name {
+    color: blue
+  }
+
+  .work {
+    font-weight: bold;
+    font-size: 15px
+  }
+
+  .about span {
+    font-size: 13px
+  }
+
+  .v-profile {
+    color: blue;
+    cursor: pointer
+  }
+
+  .box {
+    -webkit-box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72);
+    -moz-box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72);
+    box-shadow: 13px 12px 5px -10px rgba(196, 194, 196, 0.72)
+  }
+
+  .col-md-3 {
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <%= yield %>
+  <div class="container mt-3">
+      <div class="row">
+          <div class="col-md-3">
+                  <h5 class="mt-3 name"></h5><span class="work d-block"><%= data.user_name.upcase %></span><span class="work d-block"></span>
+                  <div class="mt-4 about"><span><%= data.dob %></span></div>
+                  <div class="mt-4 about"><span><%= data.email %></span></div>
+                  <div class="mt-4 about"><span><%= data.year %></span></div>
+                  <div class="mt-4 about"><span><%= data.owner_type %></span></div>
+                  <div class="mt-4 about"><span><%= data.bike_name %></span></div>
+                  <div class="mt-4 about"><span><%= data.bike_number %></span></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
