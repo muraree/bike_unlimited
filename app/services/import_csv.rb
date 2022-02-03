@@ -7,7 +7,7 @@ class ImportCsv
   end
 
   def run
-    CSV.foreach(file.path, headers:true) do |row|
+    CSV.foreach(file, headers:true) do |row|
       rider_data = save_rider_data(row)
       GenerateUserPdf.new(rider_data).run
     end
